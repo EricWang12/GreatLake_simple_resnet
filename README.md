@@ -3,7 +3,7 @@
 ## Requesting an account
 
 - submit form to [https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service](https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service)
-- Ask us to put you in the slurm group (jungaocv0), or you will not be able to run anything, it will just say no account available.
+- Ask us to put you in the slurm group (jungaocv0), or you will not be able to run anything, it will just say: *Invalid account or account/partition combination specified*
 
 ## Logging into the slurm
 

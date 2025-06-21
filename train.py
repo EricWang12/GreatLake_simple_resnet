@@ -4,15 +4,15 @@ import torch.optim as optim
 from torchvision import datasets, transforms, models
 
 # ----------  hyper-parameters ----------
-batch_size = 128
+batch_size = 256
 lr          = 0.1
-num_workers = 4          # adjust to your machine
-epochs      = 1          # keep small for a quick demo
+num_workers = 4         
+epochs      = 5          
 device      = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # ----------  dataset ----------
 transform = transforms.Compose([
-    transforms.Resize(224),        # ResNet expects 224×224
+    transforms.Resize(224),        
     transforms.ToTensor(),
     transforms.Normalize((0.5,)*3, (0.5,)*3)
 ])
@@ -52,3 +52,33 @@ for epoch in range(epochs):
             running_loss = 0.0
 
 print("Finished.")
+
+
+# ----------  evaluation ----------
+model.eval()
+test_loader = torch.utils.data.DataLoader(
+    datasets.CIFAR10(root="./data", train=False, download=True, transform=transform),
+    batch_size=batch_size,
+    shuffle=False,
+    num_workers=num_workers,
+    pin_memory=True,
+)
+
+correct = 0
+total = 0
+with torch.no_grad():
+    for inputs, targets in test_loader:
+        inputs, targets = inputs.to(device, non_blocking=True), targets.to(device, non_blocking=True)
+        outputs = model(inputs)
+        _, predicted = torch.max(outputs.data, 1)
+        total += targets.size(0)
+        correct += (predicted == targets).sum().item()
+
+accuracy = 100 * correct / total
+print(f"Test Accuracy: {accuracy:.2f}% ({correct}/{total})")
+# Save the trained model
+torch.save(model.state_dict(), 'resnet18_cifar10.pth')
+print("Model saved to resnet18_cifar10.pth")
+
+
+
