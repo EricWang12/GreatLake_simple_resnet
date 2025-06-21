@@ -114,7 +114,7 @@ You can check the job status with `squeue --me`.
 
 If everything goes well, you should see the job running and dump the output in the `logs/` folder.
 
-
+### TODO: multi-GPU example
 
 ## STORAGE
 
