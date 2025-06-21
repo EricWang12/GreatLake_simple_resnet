@@ -104,6 +104,22 @@ bash run.sh
 
 You should see it running on GPU.
 
+## Submit a job
+
+```bash
+sbatch submit_job.sh
+```
+
+You can check the job status with `squeue --me`.
+
+If everything goes well, you should see the job running and dump the output in the `logs/` folder.
+
+
+
+
+
+
+
 ## MISC
 
 - It seems git doesn’t work well in the gl-nodes, use git with the login node
