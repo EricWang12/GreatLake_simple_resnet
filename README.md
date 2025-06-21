@@ -28,7 +28,7 @@ srun \
  --cpus-per-task=4 \
  --gres=gpu:1 \
  --mem-per-cpu=11GB \
- --time=14-00:00:00 \
+ --time=02:00:00 \
  --account=jungaocv0 \
  --partition=spgpu \
  --pty /bin/bash
