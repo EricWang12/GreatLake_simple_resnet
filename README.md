@@ -3,7 +3,6 @@
 ## Requesting an account
 
 - submit form to [https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service](https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service)
-
 - Ask us to put you in the slurm group (jungaocv0), or you will not be able to run anything, it will just say no account available.
 
 ## Logging into the slurm
@@ -79,8 +78,11 @@ In order to dev on vscode/cursor, instead of ssh, we need to use **Remote-Tunnel
 The cursor is practically the same, except:
 
 - Remote machine:
+    - use [https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64](https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64)
     
-    use [https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64](https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64)
+    ```bash
+    cursor tunnel
+    ```
     
 - local machine:
     
@@ -96,7 +98,7 @@ The cursor is practically the same, except:
 2. try the resnet:
 
 ```bash
-git clone  https://github.com/EricWang12/simple_resnet
+git clone  https://github.com/EricWang12/GreatLake_simple_resnet
 bash run.sh
 ```
 
