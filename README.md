@@ -3,11 +3,11 @@
 ## Requesting an account
 
 - submit form to [https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service](https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=42&RequestorType=Service)
-- Ask us to put you in the slurm group (jungaocv0), or you will not be able to run anything, it will just say: *Invalid account or account/partition combination specified*
+- Ask the administrator to put you in the slurm group (jungaocv0), or you will not be able to run anything, it will just say: *Invalid account or account/partition combination specified*
 
-## Logging into the slurm
+## Logging into the Slurm
 
-- After created your login, you can then access the cluster with the cheatsheet [https://docs.google.com/document/d/1wsr3yzkkojUMBCCneCz-l413xBzU-SZFAqcFrAAjttk/edit?tab=t.0#heading=h.kquo6lavnl0f](https://docs.google.com/document/d/1wsr3yzkkojUMBCCneCz-l413xBzU-SZFAqcFrAAjttk/edit?tab=t.0#heading=h.kquo6lavnl0f)
+- After creating your login, you can then access the cluster with the cheatsheet [https://docs.google.com/document/d/1wsr3yzkkojUMBCCneCz-l413xBzU-SZFAqcFrAAjttk/edit?tab=t.0#heading=h.kquo6lavnl0f](https://docs.google.com/document/d/1wsr3yzkkojUMBCCneCz-l413xBzU-SZFAqcFrAAjttk/edit?tab=t.0#heading=h.kquo6lavnl0f)
     - E.g. ssh *uniqname*@greatlakes.arc-ts.umich.edu (note: this one needs VPN if outside of campus [https://its.umich.edu/enterprise/wifi-networks/vpn](https://its.umich.edu/enterprise/wifi-networks/vpn))
 
 ## Creating an interactive Job
@@ -46,7 +46,7 @@ module load cuda
 module load cudnn
 ```
 
-in your ~/.bash_rc so that you don’t have to do this everytime, but it take some time to load it at each terminal open
+in your ~/.bash_rc so that you don’t have to do this every time, but it takes some time to load it at each terminal open
 
 ## Connecting with VSCode/Cursor
 
@@ -55,7 +55,7 @@ In order to dev on vscode/cursor, instead of ssh, we need to use **Remote-Tunnel
 ### vscode
 
 - Remote (glxxxx node)
-    1. download code-cli from 
+    1. Download code-cli from 
         
         ```bash
         curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
@@ -63,15 +63,15 @@ In order to dev on vscode/cursor, instead of ssh, we need to use **Remote-Tunnel
         
         ```
         
-    2. create tunnel and login with your account
+    2. Create tunnel and login with your account
         
         ```bash
         code tunnel
         ```
         
 - Local machine
-    1. install remote-tunnel extention
-    2. Connect to Tunnel, log-in to your account and connect to the tunnel session
+    1. Install remote-tunnel extension
+    2. Connect to the Tunnel, log-in to your account, and connect to the tunnel session
 
 ### Cursor
 
@@ -86,11 +86,11 @@ The cursor is practically the same, except:
     
 - local machine:
     
-    install the tunnel extention from VSIX:
+    Install the tunnel extension from VSIX:
     
-     1. download the tunnel extension from : [https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/remote-server/1.6.2025061709/vspackage](https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/remote-server/1.6.2025061709/vspackage) 
+     1. Download the tunnel extension from : [https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/remote-server/1.6.2025061709/vspackage](https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/remote-server/1.6.2025061709/vspackage) 
     
-    1. in cursor extension install from this vsix
+     2. In the cursor extension, install from this VSIX
 
 ## Train something!
 
