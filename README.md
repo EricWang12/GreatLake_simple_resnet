@@ -126,6 +126,9 @@ TODO: More details and examples.
 - Home directory  (/home/*uniqname)* (80 GB quota)
 
 
+### Turbo
+
+- The turbo gets snap-shot every day at 1:30, so it is important not to overfill the storage. For example, you stored 8TB of ckpt today, and then it would get snap-shot into the /nfs/turbo/coe-jungaocv/.snapshot folder, even if you remove your 8TB ckpt later, the snapshot will still exist.
 
 
 
