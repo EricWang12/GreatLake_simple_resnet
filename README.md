@@ -116,6 +116,14 @@ If everything goes well, you should see the job running and dump the output in t
 
 ### TODO: multi-GPU example
 
+```bash
+sbatch submit_job_2gpu.sh
+```
+
+Pretty much the same as the single-GPU example, but probably need more cpu for the dataloader.
+
+
+
 ## STORAGE
 
 TODO: More details and examples.
