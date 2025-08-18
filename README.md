@@ -121,8 +121,8 @@ If everything goes well, you should see the job running and dump the output in t
 TODO: More details and examples.
 
 - [Locker](https://its.umich.edu/advanced-research-computing/storage/locker) (/nfs/locker/*volumename*) [large files, non-frequent]
-- [Turbo storage](https://its.umich.edu/advanced-research-computing/storage/turbo) (/nfs/turbo/*volumename*) [Long-term slow storage ~10TB free]
-- [Scratch](https://its.umich.edu/advanced-research-computing/facilities-services) (/scratch/*account_root*/*account*/*uniqname)* temp fast dir (~1 TB) Inactive files purged after 60 days
+- [Turbo storage](https://its.umich.edu/advanced-research-computing/storage/turbo) (/nfs/turbo/*volumename*) [Long-term slow storage see below for detail] *(Use this as primary storage [for now] )*
+- [Scratch](https://its.umich.edu/advanced-research-computing/facilities-services) (/scratch/*account_root*/*account*/*uniqname)* temp fast dir (~10 TB) Inactive files purged after 60 days
 - Home directory  (/home/*uniqname)* (80 GB quota)
 
 
