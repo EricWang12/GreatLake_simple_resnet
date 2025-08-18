@@ -128,7 +128,10 @@ TODO: More details and examples.
 
 ### Turbo
 
-- The turbo gets snap-shot every day at 1:30, so it is important not to overfill the storage. For example, you stored 8TB of ckpt today, and then it would get snap-shot into the /nfs/turbo/coe-jungaocv/.snapshot folder, even if you remove your 8TB ckpt later, the snapshot will still exist.
+- **/nfs/turbo/coe-jungaocv/** This is 10TB replicated and snapshoted storage, use for high-value stuff like the environment, processed data, code, etc.    
+    - This turbo gets snap-shot every day at 1:30, so it is important not to overfill the storage. For example, you stored 8TB of ckpt today, and then it would get snap-shot into the /nfs/turbo/coe-jungaocv/.snapshot folder, even if you remove your 8TB ckpt later, the snapshot will still exist.
+ 
+- **/nfs/turbo/coe-jungaocv-turbo2** This storage is un-replicated and snapshot-disabled. Use for low-value stuff like datasets you could just download/verify again if lost/corrupted. 
 
 
 
