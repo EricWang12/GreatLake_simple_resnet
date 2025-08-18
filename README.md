@@ -129,11 +129,17 @@ Pretty much the same as the single-GPU example, but probably need more cpu for t
 TODO: More details and examples.
 
 - [Locker](https://its.umich.edu/advanced-research-computing/storage/locker) (/nfs/locker/*volumename*) [large files, non-frequent]
-- [Turbo storage](https://its.umich.edu/advanced-research-computing/storage/turbo) (/nfs/turbo/*volumename*) [Long-term slow storage ~10TB free]
-- [Scratch](https://its.umich.edu/advanced-research-computing/facilities-services) (/scratch/*account_root*/*account*/*uniqname)* temp fast dir (~1 TB) Inactive files purged after 60 days
+- [Turbo storage](https://its.umich.edu/advanced-research-computing/storage/turbo) (/nfs/turbo/*volumename*) [Long-term slow storage see below for detail] *(Use this as primary storage [for now] )*
+- [Scratch](https://its.umich.edu/advanced-research-computing/facilities-services) (/scratch/*account_root*/*account*/*uniqname)* temp fast dir (~10 TB) Inactive files purged after 60 days
 - Home directory  (/home/*uniqname)* (80 GB quota)
 
 
+### Turbo
+
+- **/nfs/turbo/coe-jungaocv/** This is 10TB replicated and snapshoted storage, use for high-value stuff like the environment, processed data, code, etc.    
+    - This turbo gets snap-shot every day at 1:30, so it is important not to overfill this storage. For example, you stored 8TB of ckpt today, and then it would get snap-shot into the /nfs/turbo/coe-jungaocv/.snapshot folder, and the storage becomes [10 - 16 = -6GB].  Even if you remove your 8TB ckpt afterwards, the snapshot will still exist and eat up 8 TB of storage, and can only be deleted by the IT admin upon request. SO DON'T OVERFILL THIS!!
+ 
+- **/nfs/turbo/coe-jungaocv-turbo2** This storage is un-replicated and snapshot-disabled. Use for low-value stuff like datasets you could just download/verify again if lost/corrupted. 
 
 
 
