@@ -154,8 +154,8 @@ TODO: More details and examples.
 
 ### Home
 Consider:
-- Move your conda env to turbo
-- hyperlink your .cache to turbo
+- Move your conda env and update default conda env path to turbo
+- hyperlink your ~/.cache to turbo
 
 
 ### Turbo
