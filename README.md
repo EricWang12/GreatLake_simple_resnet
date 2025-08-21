@@ -152,6 +152,11 @@ TODO: More details and examples.
 - [Scratch](https://its.umich.edu/advanced-research-computing/facilities-services) (/scratch/*account_root*/*account*/*uniqname)* temp fast dir (~10 TB) Inactive files purged after 60 days
 - Home directory  (/home/*uniqname)* (80 GB quota)
 
+### Home
+Consider:
+- Move your conda env to turbo
+- hyperlink your .cache to turbo
+
 
 ### Turbo
 
