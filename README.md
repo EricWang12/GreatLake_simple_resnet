@@ -14,10 +14,27 @@
 
 - Right now we can use A40 & V100 in the great lake cluster, and we have 11k free gpu hours to use there until July1st (it will renew after July 1st)
 - For A40 gpus, we can ask for one gpu machine with the scripts below
-    - Note: make sure it’s always `-cpus-per-task=4` and `-mem-per-cpu=11GB` for A40 (long story short: this is the specifications for one gpu)
-    
 
-***USE A TMUX SESSION TO LAUNCH INTERACTIVE JOB SO THAT YOU WON’T LOSE IT UPON CLOSING THE TERMINAL***
+
+------
+## 4CPU-48MEM-1GPU
+
+FOLLOW STRICTLY FOR **4CPU-48MEM-1GPU** RATIO FOR THE SPGPU JOBS
+
+
+* The times are charged in the ratio of the maximum allocated resource to the above ratio.
+
+
+    - i.e., the funding you burn with  4CPU-96MEM-1GPU is exactly the same as 8CPU-96MEM-2GPU, only because of the 96 Memory. So follow strictly with the above ratio
+
+* You can play with 
+```  my_job_estimate -c 4 -m 48g -g 1 -p spgpu -t 14-00:00:00```
+to see the estimated charge related to your task/job.
+
+------
+
+***USE A TMUX SESSION TO LAUNCH AN INTERACTIVE JOB SO THAT YOU WON’T LOSE IT UPON CLOSING THE TERMINAL***
+
 
 ```bash
 srun \
@@ -27,7 +44,7 @@ srun \
  --ntasks-per-node=1 \
  --cpus-per-task=4 \
  --gres=gpu:1 \
- --mem-per-cpu=11GB \
+ --mem-per-cpu=12GB \
  --time=02:00:00 \
  --account=jungaocv0 \
  --partition=spgpu \
@@ -35,6 +52,8 @@ srun \
 ```
 
 Then you should see a gl node connected to the terminal, this would be your gpu node.
+
+Set up the SSH key-pair, then you can ssh gl15xx to the node.
 
 ### Personal Tip:
 
