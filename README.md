@@ -133,13 +133,13 @@ You can check the job status with `squeue --me`.
 
 If everything goes well, you should see the job running and dump the output in the `logs/` folder.
 
-### TODO: multi-GPU example
+###  multi-GPU example
 
 ```bash
 sbatch submit_job_2gpu.sh
 ```
 
-Pretty much the same as the single-GPU example, but probably need more cpu for the dataloader.
+Pretty much the same as the single-GPU example, update CPU and mem according to the ratio mentioned above.
 
 
 
