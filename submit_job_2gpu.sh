@@ -3,7 +3,7 @@
 #SBATCH --account=jungaocv0   
 #SBATCH --partition=spgpu             
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=8            
+#SBATCH --cpus-per-task=4           
 #SBATCH --gres=gpu:2
 #SBATCH --mem-per-cpu=11GB
 #SBATCH --time=02:00:00              
