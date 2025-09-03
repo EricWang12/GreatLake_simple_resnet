@@ -2,18 +2,6 @@
 # Mirror a *folder* from Great Lakes -> Data Den, preserving the full path
 # under Data Den's /coe-jungaocv/wzn/ hierarchy.
 #
-# Example:
-#   SRC  = /nfs/turbo/coe-jungaocv/wzn/workspace/AffU/third_party/sonata
-#   DEST = /coe-jungaocv/wzn/workspace/AffU/third_party/sonata  (on Data Den)
-#
-# Requirements: globus CLI, two bookmarks:
-#   - Source (default: turbo)           -> points at .../wzn/
-#   - Destination (default: dataden-jungaocv) -> points at /coe-jungaocv/
-#
-# Env overrides:
-#   SRC_BM (default: turbo)
-#   DST_BM (default: dataden-jungaocv)
-#   MIRROR_ROOT (default: none)  # top-level folder on Data Den to mirror under
 #
 # Usage:
 #   ./upload_fullpath_to_dataden.sh <folder_path> [--dry-run]
