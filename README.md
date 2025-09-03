@@ -165,6 +165,61 @@ Consider:
  
 - **/nfs/turbo/coe-jungaocv-turbo2** This storage is un-replicated and snapshot-disabled. Use for low-value stuff like datasets you could just download/verify again if lost/corrupted. 
 
+#### Mounting the Turbo to your workstation
+
+1. Get your workstation's IP and ask Jun to put you on the export list
+2. Follow this doc: https://documentation.its.umich.edu/node/5039
+3. On your local machine, add your user to the turbo group:
+```bash
+sudo groupadd -g 2529144 coe-jungaocv-turbo
+sudo usermod -aG coe-jungaocv-turbo ${YOUR_USERNAME}
+# hard refresh user
+loginctl terminate-user wzn
+
+#verify you are in coe-jungaocv-turbo group
+id
+```
+
+Now you can go to /mnt/coe-jungaocv/ just as in turbo!!
+
+
+### DataDen
+
+Follow the tutorials here to set up your Globus with DataDen:
+https://documentation.its.umich.edu/node/5021
+
+In the file manager:
+1. Add DataDen:
+   *  In the collection, find  **UMich ARC Non-Sensitive Data Den Volume Collection**
+   *  In path, type **/coe-jungaocv/{YOUR_UNIQUENAME}**, create this if possible. This is your dataden folder
+   *  bookmark it with a name, for example "dd-wzn"
+2. Add your GreatLake path (turbo here for example):
+   *  In the collection, find  **umich#greatlakes**
+   *  similar to above, go to a path and bookmark it (for example, gl). I suggest just bookmarking / (root directory) to use dataden.sh script
+
+
+On GreatLake, install globus client cli and verify:
+```bash
+globus login
+globus session show
+ 
+globus bookmark list
+
+# You should see something like:
+# Name             | Bookmark ID | Endpoint ID | Endpoint Name                                      | Path                        
+# ---------------- | ----------- | ----------- | -------------------------------------------------- | ----------------------------
+# dd-wzn           | xxx-xxx     | xxx-xxx     | UMich ARC Non-Sensitive Data Den Volume Collection | /coe-jungaocv/wzn/          
+# gl               | xxx-xxx     | xxx-xxx     | umich#greatlakes                                   | /                           
+
+```
+
+Finally, change the bookmark names in the ```dataden.sh``` to match the names above, and you can use it with:
+
+```bash
+./dataden.sh <folder_path> [<remote_subpath>] [--dry-run]
+```
+
+
 
 
 ## MISC
