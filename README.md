@@ -155,6 +155,10 @@ TODO: More details and examples.
 ### Home
 Consider:
 - Move your conda env and update default conda env path to turbo
+  ```
+  conda config --add envs_dirs  your_env_path
+  conda config --set env_prompt '({name}) '
+  ```
 - hyperlink your ~/.cache to turbo
 
 
