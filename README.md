@@ -171,7 +171,7 @@ Consider:
 
 #### Mounting the Turbo to your workstation
 
-1. Get your workstation's IP and ask Jun to put you on the export list
+1. Get your workstation's IP and ask admin to put you on the export list
 2. Follow this doc: https://documentation.its.umich.edu/node/5039
 3. On your local machine, add your user to the turbo group:
 ```bash
