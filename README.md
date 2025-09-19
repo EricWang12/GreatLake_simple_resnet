@@ -167,7 +167,7 @@ Consider:
 - **/nfs/turbo/coe-jungaocv/** This is 10TB replicated and snapshoted storage, use for high-value stuff like the environment, processed data, code, etc.    
     - **DON'T OVERFILL THIS !!!** This turbo gets snap-shot (which YOU cannot delete) every day at 1:30, so it is important not to overfill this storage. For example, you stored 8TB of ckpt today, and then it would get snap-shot into the /nfs/turbo/coe-jungaocv/.snapshot folder, and the storage becomes [10 - 16 = -6GB].  Even if you remove your 8TB ckpt afterwards, the snapshot will still exist and eat up 8 TB of storage, and can only be deleted by the IT admin upon request. SO DON'T OVERFILL THIS!!
  
-- **/nfs/turbo/coe-jungaocv-turbo2** This storage is un-replicated and snapshot-disabled. Use for low-value stuff like datasets you could just download/verify again if lost/corrupted. 
+- **/nfs/turbo/coe-jungaocv-turbo2 (20T)** This storage is un-replicated and snapshot-disabled. Use for low-value stuff like datasets you could just download/verify again if lost/corrupted. 
 
 #### Mounting the Turbo to your workstation
 
