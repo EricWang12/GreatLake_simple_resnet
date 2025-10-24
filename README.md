@@ -173,7 +173,7 @@ Consider:
 
 1. Get your workstation's IP and ask admin to put you on the export list
 2. Follow this doc: https://documentation.its.umich.edu/node/5039
-### TLDR:
+###### TLDR:
 ```bash
 # Mimic the turbo path on GreatLakes
 sudo mkdir -p /nfs/turbo/coe-jungaocv
