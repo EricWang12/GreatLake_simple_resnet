@@ -173,6 +173,15 @@ Consider:
 
 1. Get your workstation's IP and ask admin to put you on the export list
 2. Follow this doc: https://documentation.its.umich.edu/node/5039
+### TLDR:
+```bash
+# Mimic the turbo path on GreatLakes
+sudo mkdir -p /nfs/turbo/coe-jungaocv
+sudo mkdir -p /nfs/turbo/coe-jungaocv-turbo2
+
+sudo mount -t nfs coe-jungaocv.turbo.storage.umich.edu:/coe-jungaocv /nfs/turbo/coe-jungaocv
+sudo mount -t nfs coe-jungaocv-turbo2.turbo.storage.umich.edu:/coe-jungaocv-turbo2 /nfs/turbo/coe-jungaocv-turbo2
+```
 3. On your local machine, add your user to the turbo group:
 ```bash
 sudo groupadd -g 2529144 coe-jungaocv-turbo
