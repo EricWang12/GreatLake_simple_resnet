@@ -193,7 +193,7 @@ loginctl terminate-user wzn
 id
 ```
 
-Now you can go to /mnt/coe-jungaocv/ just as in turbo!!
+Now you can go to /nfs/turbo/coe-jungaocv just as in turbo!!
 
 
 ### DataDen
