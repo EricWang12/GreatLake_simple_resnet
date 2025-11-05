@@ -191,6 +191,9 @@ loginctl terminate-user wzn
 
 #verify you are in coe-jungaocv-turbo group
 id
+
+#(optional) redirect conda env to existing turbo ones
+conda config --add envs_dirs  /nfs/turbo/coe-jungaocv/{username}/conda_env/
 ```
 
 Now you can go to /nfs/turbo/coe-jungaocv just as in turbo!!
