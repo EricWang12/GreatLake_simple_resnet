@@ -14,5 +14,8 @@ module load gcc
 module load cuda
 module load cudnn
 
+# Initialize Conda for non-interactive shells
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
+
 source activate resnet
 python train.py 
