@@ -262,7 +262,7 @@ Finally, change the bookmark names in the ```dataden.sh``` to match the names ab
 
 # Example:
 # ./dataden.sh /nfs/turbo/coe-jungaocv-turbo2/wzn/datasets/AffU_datasets/ego4d datasets/ 
-# ( /nfs/turbo/coe-jungaocv-turbo2/wzn/datasets/AffU_datasets/ego4d/ -> DataDen: /coe-jungaocv/w zn/datasets/ego4d/)
+# ( /nfs/turbo/coe-jungaocv-turbo2/wzn/datasets/AffU_datasets/ego4d/ -> DataDen: /coe-jungaocv/wzn/datasets/ego4d/)
 
 ```
 
