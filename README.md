@@ -207,15 +207,35 @@ https://documentation.its.umich.edu/node/5021
 Basically: go to globus.org and log-in with your umich account.
 In the file manager (left):
 1. Add DataDen:
-   *  In the collection, find  **UMich ARC Non-Sensitive Data Den Volume Collection**
+   *  In the File Manager - Collection, find  **UMich ARC Non-Sensitive Data Den Volume Collection**
    *  In path, type **/coe-jungaocv/{YOUR_UNIQUENAME}**, create this if possible. This is your dataden folder
-   *  bookmark it with a name, for example "dd-wzn"
+   *  bookmark it with a name (orange tag on the right), for example "dd-wzn"
+
 2. Add your GreatLake path (turbo here for example):
    *  In the collection, find  **umich#greatlakes**
-   *  similar to above, go to a path and bookmark it (for example, gl). I suggest just bookmarking / (root directory) to use dataden.sh script
+   *  similar to above, go to a path and bookmark it (for example, gl). I suggest just bookmarking the root directory (/) to use dataden.sh script
+
+![Globus Transfer Example](doc/globus-FileManager.png)
 
 
+Here you can use the GUI (check the folder and click start) to migrate files, from or to DataDen.
 
+
+> **NOTE:**  
+> According to the [DataDen Policy](https://its.umich.edu/advanced-research-computing/storage/data-den/policies), There is a file number limit on DataDen:
+```text
+ ... each 1TB of Data Den capacity provides only 10,000 files and only migrates files 100MB or larger. The optimal file size ranges from 10–200GB. The maximum file size is 8TB, but files should optimally not be larger than 1TB.
+```
+> **Basically:**  
+> - file size < 100MB or > 8TB will be skipped.
+> - only 10,000 files per 1 TB.
+>
+> **So please consider tar your dataset into chunks before uploading to DataDen.**
+>
+> *Interstingly, the <100MB restriction only apply at cli (see below), if you use the GUI in the screenshot above, it seems you can upload files <100MB. Other restrictions not tested.*
+
+
+#### Cli
 On GreatLake (or your machine), install globus client cli and verify:
 ```bash
 # pip install globus-cli
@@ -232,10 +252,17 @@ globus bookmark list
 
 ```
 
+
+
 Finally, change the bookmark names in the ```dataden.sh``` to match the names above, and you can use it with:
 
 ```bash
 ./dataden.sh <folder_path> [<remote_subpath>] [--dry-run]
+
+# Example:
+# ./dataden.sh /nfs/turbo/coe-jungaocv-turbo2/wzn/datasets/AffU_datasets/ego4d datasets/ 
+# ( /nfs/turbo/coe-jungaocv-turbo2/wzn/datasets/AffU_datasets/ego4d/ -> DataDen: /coe-jungaocv/w zn/datasets/ego4d/)
+
 ```
 
 
