@@ -204,7 +204,8 @@ Now you can go to /nfs/turbo/coe-jungaocv just as in turbo!!
 Follow the tutorials here to set up your Globus with DataDen:
 https://documentation.its.umich.edu/node/5021
 
-Basically: go to globus.org and log-in with your umich account.
+After that and login with your umich account on  globus.org, setup our endpoints:
+
 In the file manager (left):
 1. Add DataDen:
    *  In the File Manager - Collection, find  **UMich ARC Non-Sensitive Data Den Volume Collection**
