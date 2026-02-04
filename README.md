@@ -204,7 +204,8 @@ Now you can go to /nfs/turbo/coe-jungaocv just as in turbo!!
 Follow the tutorials here to set up your Globus with DataDen:
 https://documentation.its.umich.edu/node/5021
 
-In the file manager:
+Basically: go to globus.org and log-in with your umich account.
+In the file manager (left):
 1. Add DataDen:
    *  In the collection, find  **UMich ARC Non-Sensitive Data Den Volume Collection**
    *  In path, type **/coe-jungaocv/{YOUR_UNIQUENAME}**, create this if possible. This is your dataden folder
@@ -214,7 +215,8 @@ In the file manager:
    *  similar to above, go to a path and bookmark it (for example, gl). I suggest just bookmarking / (root directory) to use dataden.sh script
 
 
-On GreatLake, install globus client cli and verify:
+
+On GreatLake (or your machine), install globus client cli and verify:
 ```bash
 # pip install globus-cli
 globus login
