@@ -219,7 +219,7 @@ In the file manager (left):
 ![Globus Transfer Example](doc/globus-FileManager.png)
 
 
-Here you can use the GUI (check the folder and click start) to migrate files, from or to DataDen.
+Here you can use the GUI (go to your folder on the gl bookmark, check your folder and click start) to migrate files, from or to DataDen.
 
 
 > **NOTE:**  
