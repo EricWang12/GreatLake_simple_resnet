@@ -216,6 +216,7 @@ In the file manager:
 
 On GreatLake, install globus client cli and verify:
 ```bash
+# pip install globus-cli
 globus login
 globus session show
  
