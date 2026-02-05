@@ -221,6 +221,7 @@ In the file manager (left):
 
 Here you can use the GUI (go to your folder on the gl bookmark, check your folder and click start) to migrate files, from or to DataDen.
 
+***I find the GUI better than the cli below, as it moves the files for you, without needing to create a node for the transfer.***
 
 > **NOTE:**  
 > According to the [DataDen Policy](https://its.umich.edu/advanced-research-computing/storage/data-den/policies), There is a file number limit on DataDen:
@@ -235,6 +236,14 @@ Here you can use the GUI (go to your folder on the gl bookmark, check your folde
 >
 > *Interstingly, the <100MB restriction only apply at cli (see below), if you use the GUI in the screenshot above, it seems you can upload files <100MB. Other restrictions not tested.*
 
+#### Verify the transfer
+```bash
+# pip install globus-cli
+# Remember to change the file paths in the script to your own.
+bash verify_dd_files.sh
+```
+
+This script will compare the sizes of the files in the DataDen folder with the files in the local/turbo/greatlake folder.
 
 #### Cli
 On GreatLake (or your machine), install globus client cli and verify:
