@@ -282,3 +282,8 @@ Finally, change the bookmark names in the ```dataden.sh``` to match the names ab
 
 - It seems git doesn’t work well in the gl-nodes, use git with the login node
 - TMUX: first ssh to gl-node in the login node via 'ssh glxxxx', and start a tmux by 'tmux new'. Then tmux should work normally at interactive jobs.
+- Create new user:
+  ```bash
+  sudo adduser newusername
+  sudo passwd -u newusername
+  ```
