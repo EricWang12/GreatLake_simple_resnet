@@ -1,12 +1,14 @@
 # NCSA Delta Cluster – Minimal GPU Usage Guide
 
-## 1. Login
+## 0. Getting the delta account
 
-```bash
-ssh <username>@login.delta.ncsa.illinois.edu
-```
+You should be able to find the username from the ACCESS CONSOLE:
 
----
+![](doc/delta_username.png)
+
+
+Then go to [https://identity.ncsa.illinois.edu/reset](https://identity.ncsa.illinois.edu/reset) to set your NCSA password. 
+
 
 ## 2. Check available GPU accounts
 
