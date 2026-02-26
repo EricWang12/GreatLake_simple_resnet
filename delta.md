@@ -8,7 +8,12 @@ You should be able to find the username from the ACCESS CONSOLE:
 
 
 Then go to [https://identity.ncsa.illinois.edu/reset](https://identity.ncsa.illinois.edu/reset) to set your NCSA password. 
+## 1. Login
 
+```bash
+ssh <username>@login.delta.ncsa.illinois.edu
+```
+---
 
 ## 2. Check available GPU accounts
 
