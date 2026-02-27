@@ -66,3 +66,17 @@ srun -A bghj-delta-gpu -p gpuA100x4-interactive \
     --pty /bin/bash
 ```
 
+## 5
+storage
+```
+ /work/hdd/bghj
+/work/nvme/bgit
+```
+
+tunnel:
+
+mkdir -p ~/cursor_cli && cd ~/cursor_cli
+curl -L -o cursor_cli.tar.gz "https://api2.cursor.sh/updates/download-latest?os=cli-linux-arm64"
+tar -xzf cursor_cli.tar.gz
+
+
