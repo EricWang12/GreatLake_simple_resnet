@@ -12,6 +12,7 @@ Then go to [https://identity.ncsa.illinois.edu/reset](https://identity.ncsa.illi
 
 ```bash
 ssh <username>@login.delta.ncsa.illinois.edu
+ssh <username>@dtai-login.delta.ncsa.illinois.edu 
 ```
 ---
 
