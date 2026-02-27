@@ -104,6 +104,9 @@ The cursor is practically the same, except:
     - use [https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64](https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64)
     
     ```bash
+    curl -Lk 'https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64' --output cursor.tar.gz
+    tar -xf cursor.tar.gz
+
     cursor tunnel
     ```
     
