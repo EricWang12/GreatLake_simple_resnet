@@ -32,14 +32,14 @@ Use the GPU account name (example: `bghj-delta-gpu`) when submitting jobs.
 sinfo -s
 ```
 
-Typical interactive GPU partitions:
 
-* `gpuA40x4-interactive`
-* `gpuA100x4-interactive`
-* `gpuA100x8-interactive`
-* `gpuH200x8-interactive`
+charges record:
+```
+jobcharge  -d 30 --detail
+```
+The charges are similar to GreatLakes, for a valid partiation of CPU-MEM-GPU ratio.
+Use this to calibrate your cost.
 
----
 
 ## 4. Start an interactive GPU session
 
